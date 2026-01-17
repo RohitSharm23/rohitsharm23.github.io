@@ -19,12 +19,12 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         /* Header */
         header {
             background: rgba(0,0,0,0.98);
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -35,11 +35,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
         }
         .logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: #00ff88;
             text-shadow: 0 0 10px rgba(0,255,136,0.5);
@@ -47,101 +45,92 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
         }
         .nav-links a {
             color: #ccc;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .nav-links a:hover {
             color: #00ff88;
-            text-shadow: 0 0 10px rgba(0,255,136,0.5);
         }
-        
-        /* FIXED Auth Section - Side by Side */
+        /* PERFECT Mobile Auth Section */
         .auth-section {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
-            flex-shrink: 0;
+            gap: 0.5rem;
+            min-width: 220px;
         }
         .auth-btn {
-            background: rgba(0,255,136,0.15);
-            color: #00ff88;
-            padding: 0.7rem 1.8rem;
-            border: 2px solid rgba(0,255,136,0.4);
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-            white-space: nowrap;
-            min-width: 90px;
-            text-align: center;
-        }
-        .auth-btn:hover {
-            background: rgba(0,255,136,0.25);
-            border-color: #00ff88;
-            box-shadow: 0 5px 15px rgba(0,255,136,0.4);
-            transform: translateY(-1px);
-        }
-        .login-btn {
+            flex: 1;
             background: linear-gradient(135deg, rgba(0,255,136,0.2), rgba(0,204,255,0.2));
-        }
-        
-        .play-btn {
-            background: linear-gradient(45deg, #00ff88, #00ccff);
             color: #000;
-            padding: 0.8rem 2rem;
+            padding: 0.6rem 1rem;
             border: none;
-            border-radius: 30px;
+            border-radius: 20px;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.85rem;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 5px 20px rgba(0,255,136,0.4);
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0,255,136,0.3);
+        }
+        .auth-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,255,136,0.5);
+        }
+        .play-btn-header {
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,255,136,0.4);
             transition: all 0.3s;
             white-space: nowrap;
-            flex-shrink: 0;
         }
-        .play-btn:hover {
+        .play-btn-header:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,255,136,0.6);
+            box-shadow: 0 8px 25px rgba(0,255,136,0.6);
         }
-        
-        /* Hero Section */
+        /* Hero */
         .hero {
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             background: linear-gradient(135deg, rgba(0,255,136,0.1) 0%, rgba(0,204,255,0.05) 100%);
-            padding-top: 80px;
+            padding-top: 70px;
         }
         .hero-content h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1.5rem;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1rem;
             color: #fff;
             text-shadow: 0 0 20px rgba(0,255,136,0.3);
         }
         .hero-content p {
-            font-size: 1.6rem;
-            margin-bottom: 3.5rem;
+            font-size: clamp(1.1rem, 4vw, 1.6rem);
+            margin-bottom: 2.5rem;
             color: #ddd;
-            max-width: 700px;
+            max-width: 90%;
             font-weight: 300;
         }
         .main-btn {
             background: linear-gradient(45deg, #00ff88, #00ccff);
             color: #000;
-            padding: 1.8rem 4rem;
+            padding: 1.5rem 3rem;
             border: none;
-            border-radius: 60px;
-            font-size: 1.5rem;
+            border-radius: 50px;
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 15px 40px rgba(0,255,136,0.4);
@@ -153,27 +142,27 @@
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 25px 50px rgba(0,255,136,0.6);
         }
-        
         /* Games Section */
         .games {
             padding: 6rem 0;
             background: rgba(10,10,10,0.8);
+            min-height: 100vh;
         }
         .section-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 4rem;
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 3rem;
             color: #fff;
             text-shadow: 0 0 15px rgba(0,255,136,0.3);
         }
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
         .game-item {
             background: rgba(255,255,255,0.08);
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             border-radius: 20px;
             text-align: center;
             border: 2px solid rgba(0,255,136,0.2);
@@ -199,40 +188,39 @@
             background: rgba(0,255,136,0.15);
             border-color: #00ff88;
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,255,136,0.2);
+            box-shadow: 0 20px 40px rgba(0,255,136,0.3);
         }
         .game-item h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             color: #00ff88;
             text-shadow: 0 0 10px rgba(0,255,136,0.5);
         }
         .game-item p {
             color: #ccc;
-            margin-bottom: 2rem;
-            font-size: 1rem;
+            margin-bottom: 1.5rem;
         }
         .game-btn {
-            background: rgba(0,255,136,0.9);
+            background: linear-gradient(45deg, #00ff88, #00ccff);
             color: #000;
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             border: none;
             border-radius: 30px;
             font-weight: bold;
             cursor: pointer;
-            font-size: 1rem;
             transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
+            font-size: 0.95rem;
         }
         .game-btn:hover {
-            background: #00ff88;
             transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,255,136,0.4);
         }
         /* Footer */
         footer {
             background: rgba(5,5,5,0.98);
-            padding: 4rem 0 2rem;
+            padding: 3rem 0 1.5rem;
             border-top: 3px solid #00ff88;
         }
         .footer-top {
@@ -241,17 +229,17 @@
             align-items: center;
             margin-bottom: 2rem;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         .footer-logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: #00ff88;
             text-shadow: 0 0 15px rgba(0,255,136,0.7);
         }
         .footer-links {
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
             list-style: none;
             flex-wrap: wrap;
         }
@@ -259,78 +247,55 @@
             color: #aaa;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
             transition: all 0.3s;
         }
         .footer-links a:hover {
             color: #00ff88;
-            text-shadow: 0 0 10px rgba(0,255,136,0.5);
         }
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(0,255,136,0.3);
             color: #888;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
-        
-        /* Mobile Responsive - FIXED */
+        /* Mobile Perfect */
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            .hero-content p {
-                font-size: 1.3rem;
-            }
             .nav-links {
                 display: none;
             }
-            nav {
-                padding: 0.5rem 0;
-            }
-            .auth-section {
-                gap: 0.5rem;
-            }
-            .auth-btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-                min-width: 75px;
-            }
-            .play-btn {
-                padding: 0.6rem 1.5rem;
-                font-size: 0.9rem;
-                order: 3;
-                width: 100%;
-                max-width: 200px;
-                margin: 0.5rem auto 0;
-                display: block;
-                text-align: center;
-            }
-            .games-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .footer-top {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
             .logo {
                 font-size: 1.5rem;
             }
             .auth-section {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0.3rem;
-            }
-            .auth-btn {
-                flex: 1;
+                gap: 0.4rem;
                 min-width: auto;
             }
-            .play-btn {
-                margin-top: 0.5rem;
+            .auth-btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+                flex: 1;
+                min-width: 70px;
+            }
+            .play-btn-header {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+                order: 3;
+                flex: none;
+            }
+            .hero {
+                padding-top: 65px;
+            }
+            .games {
+                padding: 4rem 0;
+            }
+            .games-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .footer-top {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -345,12 +310,11 @@
                 <li><a href="#games">Games</a></li>
                 <li><a href="#store">Store</a></li>
             </ul>
-            
-            <!-- FIXED: Login + Sign Up SIDE BY SIDE -->
+            <!-- PERFECT MOBILE LAYOUT -->
             <div class="auth-section">
-                <a href="login.html" class="auth-btn login-btn">Login</a>
+                <a href="login.html" class="auth-btn">Login</a>
                 <a href="signup.html" class="auth-btn">Sign Up</a>
-                <a href="#play" class="play-btn">Play Now</a>
+                <a href="games.html" class="play-btn-header">Play Now</a>
             </div>
         </nav>
     </header>
@@ -361,45 +325,45 @@
             <div class="hero-content">
                 <h1>Ton game</h1>
                 <p>Your one-stop destination for the best online games. Play instantly with friends!</p>
-                <button class="main-btn">▶ Play Now</button>
+                <a href="games.html" class="main-btn">▶ Play Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Games Section -->
+    <!-- Games Preview Section -->
     <section class="games" id="games">
         <div class="container">
-            <h2 class="section-title">Games</h2>
+            <h2 class="section-title">Featured Games</h2>
             <div class="games-grid">
                 <div class="game-item">
                     <h3>Battle Arena</h3>
-                    <p>Intense multiplayer battles with friends in real-time arenas.</p>
-                    <a href="#" class="game-btn">Play Now</a>
+                    <p>Intense multiplayer battles with friends</p>
+                    <a href="games.html" class="game-btn">Play Now</a>
                 </div>
                 <div class="game-item">
                     <h3>Tic Tac Toe</h3>
-                    <p>Two player tic tac toe game.</p>
+                    <p>Classic 2 player game</p>
                     <a href="Tic Tac Toe.html" class="game-btn">Play Now</a>
                 </div>
                 <div class="game-item">
                     <h3>Space Wars</h3>
-                    <p>Team up with friends to defend against alien invasions.</p>
-                    <a href="#" class="game-btn">Play Now</a>
+                    <p>Team up against alien invasions</p>
+                    <a href="games.html" class="game-btn">Play Now</a>
                 </div>
                 <div class="game-item">
                     <h3>Pixel Shooter</h3>
-                    <p>Classic retro shooter with modern multiplayer features.</p>
-                    <a href="#" class="game-btn">Play Now</a>
+                    <p>Retro shooter with multiplayer</p>
+                    <a href="games.html" class="game-btn">Play Now</a>
                 </div>
                 <div class="game-item">
                     <h3>Strategy Kings</h3>
-                    <p>Build your empire and battle friends in strategic warfare.</p>
-                    <a href="#" class="game-btn">Play Now</a>
+                    <p>Build empire, battle friends</p>
+                    <a href="games.html" class="game-btn">Play Now</a>
                 </div>
                 <div class="game-item">
                     <h3>Soccer Stars</h3>
-                    <p>Ultimate football experience with friends online.</p>
-                    <a href="#" class="game-btn">Play Now</a>
+                    <p>Ultimate football online</p>
+                    <a href="games.html" class="game-btn">Play Now</a>
                 </div>
             </div>
         </div>
@@ -411,9 +375,9 @@
             <div class="footer-top">
                 <div class="footer-logo">Ton games</div>
                 <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
