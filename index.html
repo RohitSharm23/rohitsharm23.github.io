@@ -137,85 +137,12 @@
             transition: all 0.4s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
         }
         .main-btn:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 25px 50px rgba(0,255,136,0.6);
-        }
-        /* Games Section */
-        .games {
-            padding: 6rem 0;
-            background: rgba(10,10,10,0.8);
-            min-height: 100vh;
-        }
-        .section-title {
-            text-align: center;
-            font-size: clamp(2rem, 6vw, 3rem);
-            margin-bottom: 3rem;
-            color: #fff;
-            text-shadow: 0 0 15px rgba(0,255,136,0.3);
-        }
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .game-item {
-            background: rgba(255,255,255,0.08);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 2px solid rgba(0,255,136,0.2);
-            transition: all 0.4s;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-        .game-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0,255,136,0.1), transparent);
-            transition: left 0.5s;
-        }
-        .game-item:hover::before {
-            left: 100%;
-        }
-        .game-item:hover {
-            background: rgba(0,255,136,0.15);
-            border-color: #00ff88;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,255,136,0.3);
-        }
-        .game-item h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #00ff88;
-            text-shadow: 0 0 10px rgba(0,255,136,0.5);
-        }
-        .game-item p {
-            color: #ccc;
-            margin-bottom: 1.5rem;
-        }
-        .game-btn {
-            background: linear-gradient(45deg, #00ff88, #00ccff);
-            color: #000;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 0.95rem;
-        }
-        .game-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,255,136,0.4);
         }
         /* Footer */
         footer {
@@ -286,13 +213,6 @@
             .hero {
                 padding-top: 65px;
             }
-            .games {
-                padding: 4rem 0;
-            }
-            .games-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
             .footer-top {
                 flex-direction: column;
                 text-align: center;
@@ -307,8 +227,6 @@
             <div class="logo">Ton game</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#store">Store</a></li>
             </ul>
             <!-- PERFECT MOBILE LAYOUT -->
             <div class="auth-section">
@@ -326,45 +244,6 @@
                 <h1>Ton game</h1>
                 <p>Your one-stop destination for the best online games. Play instantly with friends!</p>
                 <a href="games.html" class="main-btn">▶ Play Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Games Preview Section -->
-    <section class="games" id="games">
-        <div class="container">
-            <h2 class="section-title">Featured Games</h2>
-            <div class="games-grid">
-                <div class="game-item">
-                    <h3>Battle Arena</h3>
-                    <p>Intense multiplayer battles with friends</p>
-                    <a href="games.html" class="game-btn">Play Now</a>
-                </div>
-                <div class="game-item">
-                    <h3>Tic Tac Toe</h3>
-                    <p>Classic 2 player game</p>
-                    <a href="Tic Tac Toe.html" class="game-btn">Play Now</a>
-                </div>
-                <div class="game-item">
-                    <h3>Space Wars</h3>
-                    <p>Team up against alien invasions</p>
-                    <a href="games.html" class="game-btn">Play Now</a>
-                </div>
-                <div class="game-item">
-                    <h3>Pixel Shooter</h3>
-                    <p>Retro shooter with multiplayer</p>
-                    <a href="games.html" class="game-btn">Play Now</a>
-                </div>
-                <div class="game-item">
-                    <h3>Strategy Kings</h3>
-                    <p>Build empire, battle friends</p>
-                    <a href="games.html" class="game-btn">Play Now</a>
-                </div>
-                <div class="game-item">
-                    <h3>Soccer Stars</h3>
-                    <p>Ultimate football online</p>
-                    <a href="games.html" class="game-btn">Play Now</a>
-                </div>
             </div>
         </div>
     </section>
