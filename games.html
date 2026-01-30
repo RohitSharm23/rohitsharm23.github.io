@@ -9,64 +9,64 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:black;
-    color:white;
+    background:#12d6c3;
 }
 
 /* Header */
 header{
-    background:#000;
     padding:15px;
     text-align:center;
-    border-bottom:2px solid #00ff88;
+    font-size:28px;
+    font-weight:bold;
+    color:white;
 }
 
-h1{
-    color:#00ff88;
-}
-
-/* Games Grid */
-.games-container{
+/* Grid */
+.games-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap:20px;
-    padding:30px;
+    grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+    gap:18px;
+    padding:20px;
 }
 
 /* Game Card */
-.game-card{
-    background:#111;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 0 10px #00ff88;
+.game{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    cursor:pointer;
     transition:0.3s;
 }
 
-.game-card:hover{
+.game:hover{
     transform:scale(1.05);
 }
 
-.game-card h3{
-    margin-bottom:15px;
+/* Image */
+.game img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
 }
 
-.play-btn{
-    display:inline-block;
-    padding:10px 20px;
-    background:linear-gradient(45deg,#00ff88,#00ccff);
-    color:black;
+/* Name */
+.game-name{
+    text-align:center;
+    padding:10px;
     font-weight:bold;
-    text-decoration:none;
-    border-radius:20px;
+    color:#222;
 }
 
 /* Back Button */
-.back-btn{
+.back{
     display:block;
+    width:200px;
+    margin:30px auto;
     text-align:center;
-    margin:30px;
-    color:#00ff88;
+    padding:10px;
+    background:black;
+    color:white;
+    border-radius:20px;
     text-decoration:none;
 }
 </style>
@@ -74,33 +74,37 @@ h1{
 
 <body>
 
-<header>
-<h1>🎮 All Games</h1>
-</header>
+<header>🎮 Unixgame</header>
 
-<div class="games-container">
+<div class="games-grid">
 
-    <!-- Chess -->
-    <div class="game-card">
-        <h3>Chess</h3>
-        <a href="games/chess.html" class="play-btn">Play</a>
-    </div>
+<!-- Chess -->
+<a href="games/chess.html" class="game">
+<img src="images/chess.jpg">
+<div class="game-name">Chess</div>
+</a>
 
-    <!-- Snake -->
-    <div class="game-card">
-        <h3>Snake</h3>
-        <a href="games/snake.html" class="play-btn">Play</a>
-    </div>
+<!-- Snake -->
+<a href="games/snake.html" class="game">
+<img src="images/snake.jpg">
+<div class="game-name">Snake</div>
+</a>
 
-    <!-- Car Game -->
-    <div class="game-card">
-        <h3>Car Racing</h3>
-        <a href="games/car.html" class="play-btn">Play</a>
-    </div>
+<!-- Car -->
+<a href="games/car.html" class="game">
+<img src="https://static.vecteezy.com/system/resources/previews/028/598/177/original/chess-game-logo-simple-chess-piece-design-minimalist-silhouette-illustration-vector.jpg>
+<div class="game-name">Car Racing</div>
+</a>
+
+<!-- Subway -->
+<a href="games/subway.html" class="game">
+<img src="images/subway.jpg">
+<div class="game-name">Subway Run</div>
+</a>
 
 </div>
 
-<a href="index.html" class="back-btn">⬅ Back to Home</a>
+<a href="index.html" class="back">⬅ Back Home</a>
 
 </body>
 </html>
