@@ -217,41 +217,101 @@
     </header>
 
     <!-- Hero Section -->
-   <section style="
-height:100vh;
-background-image:
-linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-url('https://github.com/RohitSharm23/unixgame.github.io/blob/main/Screenshot%202026-01-31%20180125.png?raw=true');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero Section</title>
 
-  <div style="color:white; padding:20px;">
-    <h1 style="font-size:3rem;">UnixGame</h1>
-    <p style="font-size:1.2rem;">Experience Next-Level Online Gaming
-High-quality games • Fast performance • Endless fun</p>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
 
-    <a href="games.html"
-       style="
-       display:inline-block;
-       margin-top:20px;
-       padding:12px 30px;
-       background:#00ff88;
-       color:black;
-       border-radius:30px;
-       text-decoration:none;
-       font-weight:bold;">
-       Play Now
-    </a>
+/* HERO */
+.hero{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
+}
 
-  </div>
+/* Background Image */
+.hero img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
 
+/* Dark Overlay */
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    z-index:-1;
+}
+
+/* Content */
+.hero-content{
+    color:white;
+    max-width:700px;
+}
+
+.hero-content h1{
+    font-size:clamp(28px,5vw,60px);
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    font-size:clamp(14px,3vw,22px);
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.hero-content button{
+    padding:14px 36px;
+    font-size:16px;
+    background:#ff004f;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:#ff2b6a;
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <img src="" loading="lazy">
+
+    <div class="hero-content">
+        <h1>Welcome to UnixGame</h1>
+        <p>Where Gamers Become Legends</p>
+        <button>Play Free Now</button>
+    </div>
 </section>
+
+</body>
+</html>
 
 
     <!-- Footer -->
